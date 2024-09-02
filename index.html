@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herban Omnivore | Pop-Up Restaurant & Private Chef in Berkeley</title>
+    <meta name="description" content="Herban Omnivore is a plant-forward pop-up restaurant in Berkeley, CA, offering sustainable, affordable fine dining with an interactive experience for college students and private chef catering services.">
+    <meta name="keywords" content="pop up restaurants, pop up restaurants in Berkeley, Berkeley pop up restaurants, affordable tasting menus, affordable fine dining, affordable tasting menu in Berkeley, affordable fine dining in Berkeley, interactive restaurant, sustainable fine dining, private chef catering, private chef in Berkeley, catering Berkeley, college student chef, fine dining for college students">
+
+    <!-- Google Font: Poppins -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f5f1;
+            color: #4e5345;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+        }
+
+        header {
+            background-color: #88b77b;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            background-image: url('https://www.transparenttextures.com/patterns/45-degree-fabric-light.png');
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+            letter-spacing: 1.5px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin: 10px 0 0;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: #76a76b;
+            padding: 15px 0;
+            text-align: center;
+            background-image: url('https://www.transparenttextures.com/patterns/diagmonds-light.png');
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #d9ead3;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            background-image: url('https://www.transparenttextures.com/patterns/wood-pattern-light.png');
+        }
+
+        h2 {
+            color: #355c43;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .about img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item img {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .booking-form, .inquiry-form {
+            margin-top: 20px;
+        }
+        .booking-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-form h2 {
+            font-size: 28px;
+            color: #355c43;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #f4f4f4;
+        }
+
+        button {
+            padding: 12px 25px;
+            background-color: #355c43;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #88b77b;
+        }
+
+        .date-option.disabled {
+            color: #999;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #355c43;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #f4f4f4;
+        }
+
+        button {
+            padding: 12px 25px;
+            background-color: #355c43;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #88b77b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #88b77b;
+            color: white;
+            background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .social-media a:hover {
+            color: #f0f5f1;
+        }
+
+        .location {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #355c43;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #f4f4f4;
+        }
+
+        button {
+            padding: 12px 25px;
+            background-color: #355c43;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #88b77b;
+        }
+
+        .date-option.disabled {
+            color: #999;
+        }
+
+        /* Swiper Styles */
+        .swiper-container {
+            width: 100%;
+            height: 1000px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+        .swiper-slide img {
+            width: 50%;
+            height: 1000%;
+            object-fit: contain;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: #f9f9f9;
+        }
+
+        .swiper-slide img {
+            width: 70%; /* Adjust to make images smaller */
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .swiper-slide .caption {
+            font-size: 16px;
+            color: #355c43;
+            margin-top: 5px;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: #355c43 !important;
+        }
+        /* Adjacent Photos */
+    }
+        .photo-container {
+            display: flex;
+            justify-content: space-between; /* Spacing between the images */
+            align-items: center;
+            gap: 0px; /* Gap between the two images */
+        }
+
+        .photo-container img {
+            width: 48%; /* Adjust the width of each image */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    </style>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Herban Omnivore</h1>
+        <p>Affordable & Sustainable Fine Fusion Cuisine in Berkeley, CA</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#menus">Menu Gallery</a>
+        <a href="#preview">New Menu Preview</a>
+        <a href="#booking">Booking</a>
+        <a href="#inquiries">Catering & Inquiries</a>
+    </nav>
+
+    <main>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>Herban Omnivore is a student-run pop-up home kitchen located in Berkeley, California, offering plant-forward fine-dining resembling fusion cuisine at an affordable price. Inspired by global cuisines and nostalgic Taiwanese flavors, we aim to spotlight the idea of conscious eating in a casual, budget-friendly, and accessible setting. Perfect for college students, the menu this semester encourages reflection on life experiences and future aspirations, in which you get interact with and customize your meals based on your experience. Check out the Menu Preview section for more information!</p>
+             <div class="photo-container">
+                    <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\smuse.png" alt="amuseee">
+                    <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\scallop.png"alt = "scallop">
+                </div>
+                <div class="photo-container">
+                    <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\scallop crudo.png" alt="Crudo">
+                    <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\gallery.png"alt = "amuse">
+                </div>
+        </section>
+
+        <!-- Past Menus Section -->
+        <section id="menus">
+            <h2>Past Menus</h2>
+            <div class="menu-item">
+                <h3>2024 Spring - Night Market x Dining Table </h3>
+                <p>Night Market x Dining Table featured a fully plant-based menu capturing the whimsical marriage of bold street food flavors and humble gastronomical traditions in Taiwan. The menu reconciles traditions with new experiences, spotlighting nostalgic Taiwanese flavors--from night markets to our dinner tables--with an emphasis on local Californian seasonal produce and global culinary inspirations. Techniques like fermentation and ingredients like soy will be spotlighted as an origin of discourses regarding how culture plays a role in what constitutes as sustainable cuisine.</p>
+                <div class="photo-container">
+                    <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\buddha.png" alt="Bhudda's Rest">
+                    <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\amusetaiw.png" alt = "vegan amuse">
+                </div>
+            </div>
+            <p>Swipe to view the full menu and zine!</p>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\Sea Salt Caramel (3).png" alt="Dish 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\Sea Salt Caramel (3)\2.png" alt="Dish 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\Sea Salt Caramel (3)\3.png" alt="Dish 3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\Sea Salt Caramel (3)\4.png" alt="Dish 4">
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="menu-item">
+                <h3>Menu: Winter 2023 - Contemplate</h3>
+                <p>"Contemplate" featured a gallery of winter Californian produce through a plant-forward approach. The menu was crafted in a way that encourages guests to engage in contemplation from the natural, material, then spiritual realm. The zine features food systems related artwork along with a perspective piece about the conundrum between individual, food ethics, cultural pillars, and normative definitions of sustainble food choices.</p>
+                <div class="photo-container">
+                    <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\contemp amuse.png" alt = "amuse bouche">
+                    <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\contemp amuuuuse.png"  alt = "amuse">
+                </div>
+            </div>
+            <p>Swipe to view the full menu and zine!</p>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\Contemplate (4)\1.png"alt="Dish 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\Contemplate (4)\2.png" alt="Dish 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\Contemplate (4)\3.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\Contemplate (4)\4.png" alt="Dish 4">
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="menu-item">
+                <h3>Menu: Summer 2023 - Soil x Ocean </h3>
+                <p>This 10-course menu was crafted through the lens of my hometown: Taipei. An array of farm fresh local summer produce hand-selected from traditional farmers' in Taiwan married with housemade traditional Taiwanese condimets and ferments, all presented through a global culinary narrative. Zero-waste fine dining was emphasized, in which all parts of one whole chicken and all vegetable scraps were utilized and reinvented into different dishes. Each guest was given a handrawn mini zine that highlights Taiwanese local produce and introduces the though process and stories bind each dish. 
+                </p>
+                <div class="photo-container">
+                    <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\greenbeans.png" alt = "green beans">
+                    <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\rice pudding.png"alt = "amuse">
+                </div>
+                <div class="photo-container">
+                    <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\chicken.png" alt = "chicken">
+                    <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\egg.png"alt = "hotspring egg">
+                </div>
+            </div>
+    
+        </section>
+        <!-- Preview Section -->
+        <section id="preview" class="preview">
+            <h2>What is the menu like this semester?</h2>
+            <p>The menu this semester will be designed to take you on a reflective journey of vivid memories regarding your college experience. You will get to think about, play with, and choose what you eat. There will be 5 courses and 1 to 2 drinks, either served as a cocktail or mocktail by choice. The dishes will emphasize seasonal Californian produce, therefore slightly changing according to the month. The price will be $45 per person, but please contact me below for any questions or concerns. I really want to make this experience as accessible for everyone as possible!! </p>
+            <img src="C:\Users\phoeb\OneDrive\Desktop\frogweb\amuseforpreview.png" alt = "chicken">
+        <!-- Booking Section -->
+        <section id="booking">
+            <h2>Book Your Experience</h2>
+            <p>There will be a total of 3 tasting nights offered this semester on the dates listed below at 7:30 pm. To ensure quality service, the maximum number of guests at each tasting is 4. Please fill out the form below to reserve your spot. Upon submission, you will receive a confirmation email. Due to the intricate nature of the preparation, we kindly ask that guests make their payments beforehand. Cancellations more than 24 hours in advance will receeive a full refund. The menu is vegetarian by default, but please let us know if you have additional dietary restrictions.</p>
+               <p> Payment Methods:
+                1) Zelle: 5108335605
+                2) Venmo: @pho_beef</p> 
+         
+            <form class="booking-form">
+
+        <form id="bookingForm">
+
+    <div class="form-container">
+        <h2>Book Your Experience</h2>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone number">Phone number:</label>
+            <input type="phone number" id="phone number" name="phone number" required
+            <label for="date">Choose a Date:</label>
+            <select id="date" name="date" required>
+                <option value="10/19" data-guests="0">10/19</option>
+                <option value="11/16" data-guests="0">11/16</option>
+                <option value="12/7" data-guests="0">12/7</option>
+            </select>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" max="4" required>
+            <label for="payment-screenshot">Upload Payment Screenshot:</label>
+            <input type="file" id="payment-screenshot" name="payment-screenshot" accept="image/*" required>
+            <label for="dietary-restrictions">Dietary Restrictions (if any):</label>
+            <textarea id="dietary-restrictions" name="dietary-restrictions" placeholder="Please let us know if you have any dietary restrictions"></textarea>
+
+            <button type="submit">Submit Booking</button>
+        </form>
+    </div>
+
+    <div class="form-container">
+        <h2>Cancel Your Booking</h2>
+        <form id="cancellationForm">
+            <label for="cancel-email">Enter your Email:</label>
+            <input type="email" id="cancel-email" name="cancel-email" required>
+
+            <label for="cancel-date">Choose the Date:</label>
+            <select id="cancel-date" name="cancel-date" required>
+
+                <option value="10/19">10/19</option>
+                <option value="11/16">11/16</option>
+                <option value="12/7">12/7</option>
+            </select>
+
+            <label for="cancel-guests">Number of Guests to Cancel:</label>
+            <input type="number" id="cancel-guests" name="cancel-guests" min="1" max="4" required>
+
+            <button type="submit">Submit Cancellation</button>
+        </form>
+    </div>
+
+    <script>
+        // Mock object to track signups for each date
+        const maxGuestsPerDate = 4;
+        const signups = {
+            "10/19": 0,
+            "11/16": 0,
+            "12/7": 0
+        };
+
+        const form = document.getElementById('bookingForm');
+        const cancellationForm = document.getElementById('cancellationForm');
+        const dateSelect = document.getElementById('date');
+        const cancelDateSelect = document.getElementById('cancel-date');
+        const guestsInput = document.getElementById('guests');
+        const cancelGuestsInput = document.getElementById('cancel-guests');
+
+        // Function to update date options based on current signups
+        function updateDateOptions() {
+            Array.from(dateSelect.options).forEach(option => {
+                const date = option.value;
+                if (signups[date] >= maxGuestsPerDate) {
+                    option.disabled = true;
+                    option.classList.add('disabled');
+                    option.textContent = `${date} (Fully Booked)`;
+                } else {
+                    option.disabled = false;
+                    option.classList.remove('disabled');
+                    option.textContent = date;
+                }
+            });
+        }
+
+        // Update available dates on page load
+        updateDateOptions();
+
+        // Handle booking form submission
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const selectedDate = dateSelect.value;
+            const guests = parseInt(guestsInput.value);
+
+            // Check if the selected date has enough spots
+            if (signups[selectedDate] + guests <= maxGuestsPerDate) {
+                signups[selectedDate] += guests;
+                alert(`Thank you for booking! You've reserved ${guests} spot(s) for ${selectedDate}.`);
+                form.reset();
+                updateDateOptions();
+            } else {
+                alert('Not enough spots available for that date.');
+            }
+        });
+
+        // Handle cancellation form submission
+        cancellationForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const selectedDate = cancelDateSelect.value;
+            const guestsToCancel = parseInt(cancelGuestsInput.value);
+
+            // Check if the selected date has enough guests to cancel
+            if (signups[selectedDate] - guestsToCancel >= 0) {
+                signups[selectedDate] -= guestsToCancel;
+                alert(`Your booking for ${guestsToCancel} spot(s) on ${selectedDate} has been canceled.`);
+                cancellationForm.reset();
+                updateDateOptions();
+            } else {
+                alert(`You cannot cancel more spots than you have reserved.`);
+            }
+        });
+    </script>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="inquiries">
+            <h2>Contact & Inquiries</h2>
+            <p>Have any questions, want to collaborate, or inquire about private chef catering services? Feel free to reach out through the form below or follow us on Instagram for updates on future pop-up events.</p>
+            <form class="inquiry-form">
+                <label for="name-inquiry">Name:</label>
+                <input type="text" id="name-inquiry" name="name-inquiry" required>
+
+                <label for="email-inquiry">Email:</label>
+                <input type="email" id="email-inquiry" name="email-inquiry" required>
+
+                <label for="message-inquiry">Your Inquiry:</label>
+                <textarea id="message-inquiry" name="message-inquiry" rows="4"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <div class="social-media">
+                <p>Follow us:</p>
+                <a href="https://www.instagram.com/herban.omnivore/" target="_blank">Instagram</a>
+            </div>
+            <div class="location">
+                <p><strong>Location:</strong> Berkeley, California</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Herban Omnivore. All rights reserved. | Berkeley, California</p>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+
+</body>
+touch public/index.html
+touch public/styles.css
+</html>
