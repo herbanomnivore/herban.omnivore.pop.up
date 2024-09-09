@@ -61,6 +61,30 @@ app.post('/book', upload.single('payment-screenshot'), (req, res) => {
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
-EMAIL_USER=herbanomnivore@gmail.com
-EMAIL_PASS=Phoebelovescindy1013
-NOTIFICATION_EMAIL=herbanomnivore@gmail.com
+app.get('/test-email', (req, res) => {
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS
+        }
+    });
+
+    const mailOptions = {
+        from: process.env.EMAIL_USER,
+        to: process.env.NOTIFICATION_EMAIL,
+        subject: 'Test Email',
+        text: 'This is a test email to confirm email notification setup.'
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log('Error:', error);
+            res.status(500).send('Error sending email');
+        } else {
+            console.log('Email sent:', info.response);
+            res.send('Test email sent successfully');
+        }
+    });
+});
+
