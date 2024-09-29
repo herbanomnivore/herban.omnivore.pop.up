@@ -99,23 +99,20 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
 
-        .booking-form, .inquiry-form {
-            margin-top: 20px;
-        }
-        .booking-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
+      .booking-link, .contact-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #355c43;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
 
-        .booking-form h2 {
-            font-size: 28px;
-            color: #355c43;
-            margin-bottom: 20px;
-        }
+.booking-link:hover, .contact-link:hover {
+    background-color: #88b77b;
+}
 
         label {
             display: block;
@@ -435,147 +432,17 @@
                <p> Payment Methods:
                 1) Zelle: 5108335605
                 2) Venmo: @pho_beef</p> 
-         
-            <form class="booking-form">
-
-        <form id="bookingForm">
-
-    <div class="form-container">
-        <h2>Book Your Experience</h2>
-        <form id="bookingForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="phone number">Phone number:</label>
-            <input type="phone number" id="phone number" name="phone number" required
-            <label for="date">Choose a Date:</label>
-            <select id="date" name="date" required>
-                <option value="10/19" data-guests="0">10/19</option>
-                <option value="11/16" data-guests="0">11/16</option>
-                <option value="12/7" data-guests="0">12/7</option>
-            </select>
-
-            <label for="guests">Number of Guests:</label>
-            <input type="number" id="guests" name="guests" min="1" max="4" required>
-            <label for="payment-screenshot">Upload Payment Screenshot:</label>
-            <input type="file" id="payment-screenshot" name="payment-screenshot" accept="image/*" required>
-            <label for="dietary-restrictions">Dietary Restrictions (if any):</label>
-            <textarea id="dietary-restrictions" name="dietary-restrictions" placeholder="Please let us know if you have any dietary restrictions"></textarea>
-
-            <button type="submit">Submit Booking</button>
-        </form>
-    </div>
-
-    <div class="form-container">
-        <h2>Cancel Your Booking</h2>
-        <form id="cancellationForm">
-            <label for="cancel-email">Enter your Email:</label>
-            <input type="email" id="cancel-email" name="cancel-email" required>
-
-            <label for="cancel-date">Choose the Date:</label>
-            <select id="cancel-date" name="cancel-date" required>
-
-                <option value="10/19">10/19</option>
-                <option value="11/16">11/16</option>
-                <option value="12/7">12/7</option>
-            </select>
-
-            <label for="cancel-guests">Number of Guests to Cancel:</label>
-            <input type="number" id="cancel-guests" name="cancel-guests" min="1" max="4" required>
-
-            <button type="submit">Submit Cancellation</button>
-        </form>
-    </div>
-
-    <script>
-        // Mock object to track signups for each date
-        const maxGuestsPerDate = 4;
-        const signups = {
-            "10/19": 0,
-            "11/16": 0,
-            "12/7": 0
-        };
-
-        const form = document.getElementById('bookingForm');
-        const cancellationForm = document.getElementById('cancellationForm');
-        const dateSelect = document.getElementById('date');
-        const cancelDateSelect = document.getElementById('cancel-date');
-        const guestsInput = document.getElementById('guests');
-        const cancelGuestsInput = document.getElementById('cancel-guests');
-
-        // Function to update date options based on current signups
-        function updateDateOptions() {
-            Array.from(dateSelect.options).forEach(option => {
-                const date = option.value;
-                if (signups[date] >= maxGuestsPerDate) {
-                    option.disabled = true;
-                    option.classList.add('disabled');
-                    option.textContent = `${date} (Fully Booked)`;
-                } else {
-                    option.disabled = false;
-                    option.classList.remove('disabled');
-                    option.textContent = date;
-                }
-            });
-        }
-
-        // Update available dates on page load
-        updateDateOptions();
-
-        // Handle booking form submission
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const selectedDate = dateSelect.value;
-            const guests = parseInt(guestsInput.value);
-
-            // Check if the selected date has enough spots
-            if (signups[selectedDate] + guests <= maxGuestsPerDate) {
-                signups[selectedDate] += guests;
-                alert(`Thank you for booking! You've reserved ${guests} spot(s) for ${selectedDate}.`);
-                form.reset();
-                updateDateOptions();
-            } else {
-                alert('Not enough spots available for that date.');
-            }
-        });
-
-        // Handle cancellation form submission
-        cancellationForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const selectedDate = cancelDateSelect.value;
-            const guestsToCancel = parseInt(cancelGuestsInput.value);
-
-            // Check if the selected date has enough guests to cancel
-            if (signups[selectedDate] - guestsToCancel >= 0) {
-                signups[selectedDate] -= guestsToCancel;
-                alert(`Your booking for ${guestsToCancel} spot(s) on ${selectedDate} has been canceled.`);
-                cancellationForm.reset();
-                updateDateOptions();
-            } else {
-                alert(`You cannot cancel more spots than you have reserved.`);
-            }
-        });
-    </script>
+       <p> Please fill out our booking form to reserve your spot for this semester :) </p>
+            <a href="https://forms.gle/your-google-form-link" target="_blank" class="booking-link">Book Now</a>
         </section>
 
         <!-- Contact Section -->
         <section id="inquiries">
             <h2>Contact & Inquiries</h2>
-            <p>Have any questions, want to collaborate, or inquire about private chef catering services? Feel free to reach out through the form below or follow us on Instagram for updates on future pop-up events.</p>
-            <form class="inquiry-form">
-                <label for="name-inquiry">Name:</label>
-                <input type="text" id="name-inquiry" name="name-inquiry" required>
-
-                <label for="email-inquiry">Email:</label>
-                <input type="email" id="email-inquiry" name="email-inquiry" required>
-
-                <label for="message-inquiry">Your Inquiry:</label>
-                <textarea id="message-inquiry" name="message-inquiry" rows="4"></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
+            <p>Have any questions, want to collaborate, or inquire about private chef catering services? Feel free to reach out through the form below or follow us on Instagram for updates on future pop-up events.please fill out our contact form.</p>
+            <a href="https://forms.gle/your-google-form-link" target="_blank" class="contact-link">Contact Us</a>
+        </section>
+           
             <div class="social-media">
                 <p>Follow us:</p>
                 <a href="https://www.instagram.com/herban.omnivore/" target="_blank">Instagram</a>
