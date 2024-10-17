@@ -23,26 +23,26 @@
         header {
             background-color: #88b77b;
             color: white;
-            padding: 40px 0;
+            padding: 20px;
             text-align: center;
             background-image: url('https://www.transparenttextures.com/patterns/45-degree-fabric-light.png');
         }
 
         header h1 {
-            font-size: 36px;
+            font-size: 28px;
             margin: 0;
             letter-spacing: 1.5px;
         }
 
         header p {
-            font-size: 18px;
+            font-size: 16px;
             margin: 10px 0 0;
             font-style: italic;
         }
 
         nav {
             background-color: #76a76b;
-            padding: 15px 0;
+            padding: 10px;
             text-align: center;
             background-image: url('https://www.transparenttextures.com/patterns/diagmonds-light.png');
         }
@@ -50,9 +50,9 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 20px;
+            margin: 0 10px;
             font-weight: 600;
-            font-size: 18px;
+            font-size: 16px;
             transition: color 0.3s ease;
         }
 
@@ -62,8 +62,8 @@
 
         main {
             max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
+            margin: 20px auto;
+            padding: 15px;
             background-color: white;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
@@ -73,120 +73,49 @@
 
         h2 {
             color: #355c43;
-            font-size: 28px;
-            margin-bottom: 20px;
+            font-size: 24px;
+            margin-bottom: 15px;
         }
 
         p {
-            font-size: 16px;
+            font-size: 15px;
             line-height: 1.6;
         }
 
-        .about img {
-            max-width: 100%;
+        .photo-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .photo-container img {
+            width: 100%;
             height: auto;
+            max-width: 48%; /* Adjusted to make two images fit on one line on larger screens */
             border-radius: 10px;
-            margin-top: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .menu-item img {
-            max-width: 50%;
-            height: auto;
-            display: block;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        }
-
-      .booking-link, .contact-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #355c43;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.booking-link:hover, .contact-link:hover {
-    background-color: #88b77b;
-}
-
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-            background-color: #f4f4f4;
-        }
-
-        button {
-            padding: 12px 25px;
+        .booking-link, .contact-link {
+            display: inline-block;
+            padding: 10px 15px;
             background-color: #355c43;
             color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
+            text-decoration: none;
             border-radius: 5px;
+            font-size: 15px;
             transition: background-color 0.3s ease;
         }
 
-        button:hover {
-            background-color: #88b77b;
-        }
-
-        .date-option.disabled {
-            color: #999;
-        }
-
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            font-size: 14px;
-            font-weight: 600;
-            color: #355c43;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-            background-color: #f4f4f4;
-        }
-
-        button {
-            padding: 12px 25px;
-            background-color: #355c43;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
+        .booking-link:hover, .contact-link:hover {
             background-color: #88b77b;
         }
 
         footer {
             text-align: center;
-            padding: 30px 0;
-            background-color: #88b77b;
+            padding: 20px;
+            background-color: #355c43;
             color: white;
             background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
         }
@@ -203,167 +132,51 @@
         }
 
         .location {
-            margin: 20px 0;
-            font-size: 18px;
-        }
-        .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            font-size: 28px;
-            color: #355c43;
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-            background-color: #f4f4f4;
-        }
-
-        button {
-            padding: 12px 25px;
-            background-color: #355c43;
-            color: white;
-            border: none;
-            cursor: pointer;
+            margin: 15px 0;
             font-size: 16px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
         }
 
-        button:hover {
-            background-color: #88b77b;
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav a {
+                margin: 0 5px;
+                font-size: 14px;
+            }
+
+            main {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            .photo-container img {
+                max-width: 100%; /* Make images full-width on small screens */
+            }
+
+            .booking-link, .contact-link {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            footer p {
+                font-size: 14px;
+            }
+
+            .location {
+                font-size: 14px;
+            }
         }
-
-        .date-option.disabled {
-            color: #999;
-        }
-
-        /* Swiper Styles */
-        .swiper-container {
-            width: 100%;
-            height: 1000px;
-            margin-bottom: 40px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-
-        .swiper-slide img {
-            width: 50%;
-            height: 1000%;
-            object-fit: contain;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background: #f9f9f9;
-        }
-
-        .swiper-slide img {
-            width: 70%; /* Adjust to make images smaller */
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        .swiper-slide .caption {
-            font-size: 16px;
-            color: #355c43;
-            margin-top: 5px;
-        }
-
-        .swiper-pagination-bullet {
-            background-color: #355c43 !important;
-        }
-        /* Adjacent Photos */
-    }
-        .photo-container {
-            display: flex;
-            justify-content: space-between; /* Spacing between the images */
-            align-items: center;
-            gap: 0px; /* Gap between the two images */
-        }
-
-        .photo-container img {
-            width: 48%; /* Adjust the width of each image */
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-            .botanical-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #355c43;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 16px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-    transition: background-color 0.3s ease, transform 0.2s;
-}
-
-.botanical-button:hover {
-    background-color: #88b77b;
-    transform: translateY(-3px);
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #355c43;
-    color: white;
-    background-image: url('https://www.transparenttextures.com/patterns/leaf.png');
-    border-top: 4px solid #88b77b;
-}
-            header {
-    text-align: center;
-    padding: 30px 0;
-    background-color: #e6f4e1; /* Soft green */
-    border-bottom: 4px solid #a4c3a2;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-image: url('https://www.transparenttextures.com/patterns/leaf.png'); /* Botanical background */
-
-                .instagram-button {
-    display: inline-block;
-    padding: 10px;
-    background-color: #E1306C; /* Instagram brand color */
-    border-radius: 50%;
-    margin: 20px 0;
-    transition: background-color 0.3s ease;
-}
-
-.instagram-button svg {
-    fill: white;
-    width: 30px;
-    height: 30px;
-}
-
-.instagram-button:hover {
-    background-color: #C13584; /* Darker shade on hover */
-}
-
     </style>
 
     <!-- Swiper CSS -->
@@ -387,124 +200,13 @@ footer {
     </nav>
 
     <main>
-        <!-- About Section -->
+        <!-- Content Here -->
         <section id="about" class="about">
             <h2>About Us</h2>
-            <p>Herban Omnivore is a student-run pop-up home kitchen located in Berkeley, California, offering plant-forward fine-dining resembling fusion cuisine at an affordable price. Inspired by global cuisines and nostalgic Taiwanese flavors, we aim to spotlight the idea of conscious eating in a casual, budget-friendly, and accessible setting. Perfect for college students, the menu this semester encourages reflection on life experiences and future aspirations, in which you get interact with and customize your meals based on your experience. Check out the Menu Preview section for more information!</p>
-             <div class="photo-container">
-                    <img src="smuse.png" alt="amuseee">
-                    <img src="scallop.png"alt = "scallop">
-                </div>
-                <div class="photo-container">
-                    <img src="scallooop crudo.png" alt="Crudo">
-                    <img src="gallery.png"alt = "amuse">
-                </div>
+            <p>Herban Omnivore is a student-run pop-up home kitchen located in Berkeley, California...</p>
         </section>
 
-        <!-- Past Menus Section -->
-        <section id="menus">
-            <h2>Past Menus</h2>
-            <div class="menu-item">
-                <h3>2024 Spring - Night Market x Dining Table </h3>
-                <p>Night Market x Dining Table featured a fully plant-based menu capturing the whimsical marriage of bold street food flavors and humble gastronomical traditions in Taiwan. The menu reconciles traditions with new experiences, spotlighting nostalgic Taiwanese flavors--from night markets to our dinner tables--with an emphasis on local Californian seasonal produce and global culinary inspirations. Techniques like fermentation and ingredients like soy will be spotlighted as an origin of discourses regarding how culture plays a role in what constitutes as sustainable cuisine.</p>
-                <div class="photo-container">
-                    <img src="buddha.png" alt="Bhudda's Rest">
-                    <img src="amusetaiw.png" alt = "vegan amuse">
-                </div>
-            </div>
-            <p>Swipe to view the full menu and zine!</p>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="Sea Salt Caramel (3).png" alt="Dish 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="nigh2.png" alt="Dish 2">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="night.png" alt="Dish 3">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="night4.png" alt="Dish 4">
-                    </div>
-                </div>
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-            <div class="menu-item">
-                <h3>Menu: Winter 2023 - Contemplate</h3>
-                <p>"Contemplate" featured a gallery of winter Californian produce through a plant-forward approach. The menu was crafted in a way that encourages guests to engage in contemplation from the natural, material, then spiritual realm. The zine features food systems related artwork along with a perspective piece about the conundrum between individual, food ethics, cultural pillars, and normative definitions of sustainble food choices.</p>
-                <div class="photo-container">
-                    <img src="contemp amuse.png" alt = "amuse bouche">
-                    <img src="contemp amuuuuse.png"  alt = "amuse">
-                </div>
-            </div>
-            <p>Swipe to view the full menu and zine!</p>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="contemp1.png"alt="Dish 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="contemp2.png" alt="Dish 2">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="cont3.png">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="contemp4.png" alt="Dish 4">
-                    </div>
-                </div>
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-            <div class="menu-item">
-                <h3>Menu: Summer 2023 - Soil x Ocean </h3>
-                <p>This 10-course menu was crafted through the lens of my hometown: Taipei. An array of farm fresh local summer produce hand-selected from traditional farmers' in Taiwan married with housemade traditional Taiwanese condimets and ferments, all presented through a global culinary narrative. Zero-waste fine dining was emphasized, in which all parts of one whole chicken and all vegetable scraps were utilized and reinvented into different dishes. Each guest was given a handrawn mini zine that highlights Taiwanese local produce and introduces the though process and stories bind each dish. 
-                </p>
-                <div class="photo-container">
-                    <img src="greenbeans.png" alt = "green beans">
-                    <img src="rice pudding.png"alt = "amuse">
-                </div>
-                <div class="photo-container">
-                    <img src="chicken.png" alt = "chicken">
-                    <img src="egg.png"alt = "hotspring egg">
-                </div>
-            </div>
-    
-        </section>
-        <!-- Preview Section -->
-        <section id="preview" class="preview">
-            <h2>What is the menu like this semester?</h2>
-            <p>The menu this semester will be designed to take you on a reflective journey of vivid memories regarding your college experience. You will get to think about, play with, and choose what you eat. There will be 5 courses and 1 to 2 drinks, either served as a cocktail or mocktail by choice. The dishes will emphasize seasonal Californian produce, therefore slightly changing according to the month. The price will be $45 per person, but please contact me below for any questions or concerns. I really want to make this experience as accessible for everyone as possible!! </p>
-            <img src="amuseforpreview.png" alt = "chicken">
-        <!-- Booking Section -->
-        <section id="booking">
-            <h2>Book Your Experience</h2>
-            <p>There will be 2 tasting nights offered this semester on the dates listed in the form at 7:30 pm. To ensure quality service, the maximum number of guests at each tasting is 4. Please fill out the form below to reserve your spot. Upon submission, you will receive a confirmation email. Due to the intricate nature of the preparation, we kindly ask that guests make their payments beforehand. Cancellations more than 24 hours in advance will receeive a full refund. The menu is vegetarian by default, but please let us know if you have additional dietary restrictions.</p>
-       <p> Please fill out our booking form to reserve your spot for this semester :) </p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScplFC84TxTTiv8GaZTHYLaM3YKFctag1WNtaCgIauDpIXlGA/viewform?usp=sf_link" class="booking-link">Book Now</a>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="inquiries">
-            <h2>Catering & Inquiries</h2>
-            <p>Have any questions, want to collaborate, or inquire about private chef catering services? Feel free to reach out through the form below or follow us on Instagram for updates on future pop-up events.please fill out our contact form.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdR2SMCtd5WMq96PsHebyLH0RtlCpzciMO2eD8MzW-iuyqZtw/viewform?usp=sf_link" target="_blank" class="contact-link">Contact Us</a>
-        </section>
-           
-            <div class="social-media">
-                <p>Follow us:</p>
-                <a href="https://www.instagram.com/herban.omnivore/" target="_blank">Instagram</a>
-                 <a href="https://www.instagram.com/herban.omnivore/" target="_blank" class="instagram-button" aria-label="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30">
-                <path d="M15 3c3.28 0 3.692.012 4.988.072 1.275.058 2.148.254 2.652.415.644.2 1.115.435 1.612.932.497.497.733.968.932 1.612.161.504.357 1.377.415 2.652.06 1.296.072 1.708.072 4.988s-.012 3.692-.072 4.988c-.058 1.275-.254 2.148-.415 2.652-.2.644-.435 1.115-.932 1.612-.497.497-.968.733-1.612.932-.504.161-1.377.357-2.652.415-1.296.06-1.708.072-4.988.072s-3.692-.012-4.988-.072c-1.275-.058-2.148-.254-2.652-.415-.644-.2-1.115-.435-1.612-.932-.497-.497-.733-.968-.932-1.612-.161-.504-.357-1.377-.415-2.652-.06-1.296-.072-1.708-.072-4.988s.012-3.692.072-4.988c.058-1.275.254-2.148.415-2.652.2-.644.435-1.115.932-1.612.497-.497.968-.733 1.612-.932.504-.161 1.377-.357 2.652-.415C11.308 3.012 11.72 3 15 3m0-3C11.676 0 11.241.014 9.936.073c-1.304.059-2.204.272-3.002.538-.852.281-1.575.646-2.28 1.351C3.39 3.118 3.025 3.841 2.744 4.693c-.266.798-.479 1.698-.538 3.002C2.014 8.759 2 9.193 2 12.5v5c0 3.307.014 3.741.073 5.05.059 1.304.272 2.204.538 3.002.281.852.646 1.575 1.351 2.28.704.705 1.428 1.07 2.28 1.351.798.266 1.698.479 3.002.538C11.241 29.986 11.676 30 15 30s3.759-.014 5.064-.073c1.304-.059 2.204-.272 3.002-.538.852-.281 1.575-.646 2.28-1.351.705-.705 1.07-1.428 1.351-2.28.266-.798.479-1.698.538-3.002.059-1.309.073-1.743.073-5.05v-5c0-3.307-.014-3.741-.073-5.05-.059-1.304-.272-2.204-.538-3.002-.281-.852-.646-1.575-1.351-2.28C22.675 2.646 21.952 2.281 21.1 2c-.798-.266-1.698-.479-3.002-.538C18.759.014 18.324 0 15 0zm0 7.5c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5 7.5-3.358 7.5-7.5-3.358-7.5-7.5-7.5zm0 12c-2.485 0-4.5-2.015-4.5-4.5S12.515 10.5 15 10.5s4.5 2.015 4.5 4.5-2.015 4.5-4.5 4.5zm7.5-12.75a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
-            </svg>
-            </div>
-            <div class="location">
-                <p><strong>Location:</strong> Berkeley, California</p>
-            </div>
-        </section>
+        <!-- More content sections like booking, inquiries, etc. -->
     </main>
 
     <footer>
