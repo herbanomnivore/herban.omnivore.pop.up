@@ -1,24 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herban Omnivore | Pop-Up Restaurant & Private Chef in Berkeley</title>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Herban Omnivore is a plant-forward pop-up restaurant in Berkeley, CA, offering sustainable, affordable fine dining with an interactive experience for college students and private chef catering services.">
-    <meta name="keywords" content="pop-up restaurant, Berkeley fine dining, private chef Berkeley, sustainable cuisine, college student dining, affordable tasting menu, plant-based cuisine, Berkeley pop-up events, private chef catering, interactive restaurant experience, sustainable dining Berkeley">
-    <meta name="author" content="Herban Omnivore">
+    <meta name="description" content="Herban Omnivore is a plant-forward pop-up restaurant in Berkeley, and our goal is to make fine dining more sustainable and accessible for our community of college students. We offer sustainable, affordable fine dining with an interactive experience for college students and private chef catering services.">
+    <meta name="keywords" content="pop up restaurants, pop up restaurants in Berkeley, Berkeley pop up restaurants, affordable tasting menus, affordable fine dining, affordable tasting menu in Berkeley, affordable fine dining in Berkeley, interactive restaurant, sustainable fine dining, private chef catering, private chef in Berkeley, catering Berkeley, college student chef, fine dining for college students">
+<meta name="author" content="Herban Omnivore">
     <meta name="robots" content="index, follow">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <!-- Swiper CSS for image gallery -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Font: Poppins -->
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f0f5f1;
@@ -37,20 +33,20 @@
         }
 
         header h1 {
-            font-size: 28px;
+            font-size: 36px;
             margin: 0;
             letter-spacing: 1.5px;
         }
 
         header p {
-            font-size: 16px;
+            font-size: 18px;
             margin: 10px 0 0;
             font-style: italic;
         }
 
         nav {
             background-color: #76a76b;
-            padding: 10px 0;
+            padding: 15px 0;
             text-align: center;
             background-image: url('https://www.transparenttextures.com/patterns/diagmonds-light.png');
         }
@@ -58,9 +54,9 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 20px;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 18px;
             transition: color 0.3s ease;
         }
 
@@ -70,25 +66,203 @@
 
         main {
             max-width: 900px;
-            margin: 20px auto;
+            margin: 30px auto;
             padding: 20px;
             background-color: white;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            overflow: hidden;
             background-image: url('https://www.transparenttextures.com/patterns/wood-pattern-light.png');
         }
 
         h2 {
             color: #355c43;
-            font-size: 24px;
-            margin-bottom: 15px;
+            font-size: 28px;
+            margin-bottom: 20px;
         }
 
         p {
-            font-size: 15px;
+            font-size: 16px;
             line-height: 1.6;
         }
-             /* Swiper Styles */
+
+        .about img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item img {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+      .booking-link, .contact-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #355c43;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.booking-link:hover, .contact-link:hover {
+    background-color: #88b77b;
+}
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #f4f4f4;
+        }
+
+        button {
+            padding: 12px 25px;
+            background-color: #355c43;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #88b77b;
+        }
+
+        .date-option.disabled {
+            color: #999;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #355c43;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #f4f4f4;
+        }
+
+        button {
+            padding: 12px 25px;
+            background-color: #355c43;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #88b77b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #88b77b;
+            color: white;
+            background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .social-media a:hover {
+            color: #f0f5f1;
+        }
+
+        .location {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #355c43;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #f4f4f4;
+        }
+
+        button {
+            padding: 12px 25px;
+            background-color: #355c43;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #88b77b;
+        }
+
+        .date-option.disabled {
+            color: #999;
+        }
+
+        /* Swiper Styles */
         .swiper-container {
             width: 100%;
             height: 1000px;
@@ -136,101 +310,13 @@
             gap: 0px; /* Gap between the two images */
         }
 
-        .photo-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
         .photo-container img {
-            width: 100%;
+            width: 48%; /* Adjust the width of each image */
             height: auto;
-            max-width: 48%; /* Adjust for larger screens */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
 
-        .booking-link, .contact-link {
-            display: inline-block;
-            padding: 10px 15px;
-            background-color: #355c43;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 15px;
-            transition: background-color 0.3s ease;
-        }
-
-        .booking-link:hover, .contact-link:hover {
-            background-color: #88b77b;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #355c43;
-            color: white;
-            background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
-        }
-
-        .social-media a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-        }
-
-        .social-media a:hover {
-            color: #f0f5f1;
-        }
-
-        .location {
-            margin: 15px 0;
-            font-size: 16px;
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 24px;
-            }
-
-            nav a {
-                font-size: 14px;
-                margin: 0 5px;
-            }
-
-            .photo-container img {
-                max-width: 100%; /* Full width on smaller screens */
-            }
-
-            .booking-link, .contact-link {
-                font-size: 14px;
-                padding: 8px 12px;
-            }
-
-            main {
-                padding: 10px;
-                margin: 10px;
-            }
-
-            h2 {
-                font-size: 22px;
-            }
-
-            p {
-                font-size: 14px;
-            }
-
-            footer p {
-                font-size: 14px;
-            }
-
-            .location {
-                font-size: 14px;
-            }
-                .botanical-button {
+            .botanical-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #355c43;
@@ -281,18 +367,21 @@ footer {
 .instagram-button:hover {
     background-color: #C13584; /* Darker shade on hover */
 }
+
     </style>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 </head>
 
 <body>
 
-    <!-- Header Section -->
     <header>
         <h1>Herban Omnivore</h1>
         <p>Affordable & Sustainable Fine Fusion Cuisine in Berkeley, CA</p>
     </header>
 
-    <!-- Navigation Menu -->
     <nav>
         <a href="#about">About</a>
         <a href="#menus">Menu Gallery</a>
@@ -301,15 +390,12 @@ footer {
         <a href="#inquiries">Catering & Inquiries</a>
     </nav>
 
-    <!-- Main Content -->
     <main>
         <!-- About Section -->
         <section id="about" class="about">
             <h2>About Us</h2>
-            <p>Herban Omnivore is a student-run pop-up home kitchen located in Berkeley, California, and our goal is to make fine dining more sustainable and accessible for college students! We offer plant-forward fusion cuisine at an affordable price and casual setting, in both the form of pre-fixe tasting menus and custom catering services. Inspired by global cuisines and nostalgic Taiwanese flavors, we aim to spotlight the idea of conscious eating in a casual, budget-friendly, and accessible setting. Perfect for college students, the tasting menu this semester encourages reflection on life experiences and future aspirations, in which you get to interact with and customize your meals based on your experience. Check out the Menu Preview section for more information!</p>
-
-            <!-- Photo Gallery -->
-           <div class="photo-container">
+            <p>Herban Omnivore is a student-run pop-up home kitchen located in Berkeley, and our goal is to make fine dining more sustainable and accessible for college students. Inspired by global cuisines and nostalgic Taiwanese flavors, we aim to spotlight the idea of conscious eating in a casual, budget-friendly, and accessible setting. Perfect for college students, the menu this semester encourages reflection on life experiences and future aspirations, in which you get interact with and customize your meals based on your experience. Check out the Menu Preview section for more information!</p>
+             <div class="photo-container">
                     <img src="smuse.png" alt="amuseee">
                     <img src="scallop.png"alt = "scallop">
                 </div>
@@ -319,8 +405,7 @@ footer {
                 </div>
         </section>
 
-
-        <!-- Menu Section -->
+        <!-- Past Menus Section -->
         <section id="menus">
             <h2>Past Menus</h2>
             <div class="menu-item">
@@ -392,44 +477,44 @@ footer {
             </div>
     
         </section>
-
-      <!-- Preview Section -->
+        <!-- Preview Section -->
         <section id="preview" class="preview">
             <h2>What is the menu like this semester?</h2>
             <p>The menu this semester will be designed to take you on a reflective journey of vivid memories regarding your college experience. You will get to think about, play with, and choose what you eat. There will be 5 courses and 1 to 2 drinks, either served as a cocktail or mocktail by choice. The dishes will emphasize seasonal Californian produce, therefore slightly changing according to the month. The price will be $45 per person, but please contact me below for any questions or concerns. I really want to make this experience as accessible for everyone as possible!! </p>
- 
-            <!-- Booking Section -->
+        <!-- Booking Section -->
         <section id="booking">
             <h2>Book Your Experience</h2>
             <p>There will be 2 tasting nights offered this semester on the dates listed in the form at 7:30 pm. To ensure quality service, the maximum number of guests at each tasting is 4. Please fill out the form below to reserve your spot. Upon submission, you will receive a confirmation email. Due to the intricate nature of the preparation, we kindly ask that guests make their payments beforehand. Cancellations more than 24 hours in advance will receive a full refund. The menu is vegetarian by default, but please let us know if you have additional dietary restrictions.</p>
-            <p> Please fill out our booking form to reserve your spot for this semester :) </p>
-            <a href="https://forms.gle/your-google-form-link" class="booking-link">Book Now</a>
+       <p> Please fill out our booking form to reserve your spot for this semester :) </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScplFC84TxTTiv8GaZTHYLaM3YKFctag1WNtaCgIauDpIXlGA/viewform?usp=sf_link" class="booking-link">Book Now</a>
         </section>
+
         <!-- Contact Section -->
         <section id="inquiries">
             <h2>Catering & Inquiries</h2>
-            <p>Have any questions, want to collaborate, or inquire about private chef catering services? Feel free to reach out through the form below or follow us on Instagram for updates on future pop-up events.please fill out our contact form</p>
-            <a href="https://forms.gle/your-google-form-link" target="_blank" class="contact-link">Catering Booking/Contact Us</a>
+            <p>Have any questions, want to collaborate, or inquire about private chef catering services? Feel free to reach out through the form below or follow us on Instagram for updates on future pop-up events.please fill out our contact form.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdR2SMCtd5WMq96PsHebyLH0RtlCpzciMO2eD8MzW-iuyqZtw/viewform?usp=sf_link" target="_blank" class="contact-link">Contact Us</a>
         </section>
-
-        <!-- Social Media Links -->
-        <div class="social-media">
-            <p>Follow us on Instagram:</p>
-            <a href="https://www.instagram.com/herban.omnivore/" target="_blank">Instagram</a>
-        </div>
-
-        <!-- Location Info -->
-        <div class="location">
-            <p><strong>Location:</strong> Berkeley, California</p>
-        </div>
+           
+            <div class="social-media">
+                <p>Follow us:</p>
+                <a href="https://www.instagram.com/herban.omnivore/" target="_blank">Instagram</a>
+                 <a href="https://www.instagram.com/herban.omnivore/" target="_blank" class="instagram-button" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30">
+                <path d="M15 3c3.28 0 3.692.012 4.988.072 1.275.058 2.148.254 2.652.415.644.2 1.115.435 1.612.932.497.497.733.968.932 1.612.161.504.357 1.377.415 2.652.06 1.296.072 1.708.072 4.988s-.012 3.692-.072 4.988c-.058 1.275-.254 2.148-.415 2.652-.2.644-.435 1.115-.932 1.612-.497.497-.968.733-1.612.932-.504.161-1.377.357-2.652.415-1.296.06-1.708.072-4.988.072s-3.692-.012-4.988-.072c-1.275-.058-2.148-.254-2.652-.415-.644-.2-1.115-.435-1.612-.932-.497-.497-.733-.968-.932-1.612-.161-.504-.357-1.377-.415-2.652-.06-1.296-.072-1.708-.072-4.988s.012-3.692.072-4.988c.058-1.275.254-2.148.415-2.652.2-.644.435-1.115.932-1.612.497-.497.968-.733 1.612-.932.504-.161 1.377-.357 2.652-.415C11.308 3.012 11.72 3 15 3m0-3C11.676 0 11.241.014 9.936.073c-1.304.059-2.204.272-3.002.538-.852.281-1.575.646-2.28 1.351C3.39 3.118 3.025 3.841 2.744 4.693c-.266.798-.479 1.698-.538 3.002C2.014 8.759 2 9.193 2 12.5v5c0 3.307.014 3.741.073 5.05.059 1.304.272 2.204.538 3.002.281.852.646 1.575 1.351 2.28.704.705 1.428 1.07 2.28 1.351.798.266 1.698.479 3.002.538C11.241 29.986 11.676 30 15 30s3.759-.014 5.064-.073c1.304-.059 2.204-.272 3.002-.538.852-.281 1.575-.646 2.28-1.351.705-.705 1.07-1.428 1.351-2.28.266-.798.479-1.698.538-3.002.059-1.309.073-1.743.073-5.05v-5c0-3.307-.014-3.741-.073-5.05-.059-1.304-.272-2.204-.538-3.002-.281-.852-.646-1.575-1.351-2.28C22.675 2.646 21.952 2.281 21.1 2c-.798-.266-1.698-.479-3.002-.538C18.759.014 18.324 0 15 0zm0 7.5c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5 7.5-3.358 7.5-7.5-3.358-7.5-7.5-7.5zm0 12c-2.485 0-4.5-2.015-4.5-4.5S12.515 10.5 15 10.5s4.5 2.015 4.5 4.5-2.015 4.5-4.5 4.5zm7.5-12.75a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+            </svg>
+            </div>
+            <div class="location">
+                <p><strong>Location:</strong> Berkeley, California</p>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Herban Omnivore. All rights reserved. | Berkeley, California</p>
     </footer>
 
-    <!-- Swiper JS (for image gallery) -->
+    <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
@@ -445,4 +530,5 @@ footer {
 
 </body>
 </html>
+
 
