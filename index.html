@@ -265,7 +265,7 @@
         /* Swiper Styles */
         .swiper-container {
             width: 100%;
-            height: 400px;
+            height: 1000px;
             margin-bottom: 40px;
             border-radius: 10px;
             overflow: hidden;
@@ -273,7 +273,7 @@
 
         .swiper-slide img {
             width: 50%;
-            height: 400%;
+            height: 100%;
             object-fit: contain;
         }
 
@@ -434,6 +434,24 @@ footer {
                 </div>
                 <!-- Pagination -->
                 <div class="swiper-pagination"></div>
+                
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
             </div>
             <div class="menu-item">
                 <h3>Menu: Winter 2023 - Contemplate</h3>
@@ -461,6 +479,24 @@ footer {
                 </div>
                 <!-- Pagination -->
                 <div class="swiper-pagination"></div>
+                
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
             </div>
             <div class="menu-item">
                 <h3>Menu: Summer 2023 - Soil x Ocean </h3>
@@ -514,19 +550,6 @@ footer {
         <p>&copy; 2024 Herban Omnivore. All rights reserved. | Berkeley, California</p>
     </footer>
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        const swiper = new Swiper('.swiper-container', {
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-    </script>
 
 </body>
 </html>
