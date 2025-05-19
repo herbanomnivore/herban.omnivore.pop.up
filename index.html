@@ -367,6 +367,64 @@ footer {
 .instagram-button:hover {
     background-color: #C13584; /* Darker shade on hover */
 }
+                .nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #76a76b;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu > li {
+  margin: 0 10px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 16px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #88b77b;
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content li {
+  width: 100%;
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Optional: Hover effect */
+.dropdown-content a:hover {
+  background-color: #6e9e60;
+}
 
     </style>
 
@@ -384,9 +442,14 @@ footer {
 
     <nav>
         <a href="#about">About</a>
-        <a href="#menus">Menu Gallery</a>
-        <a href="#preview">New Menu Preview</a>
-        <a href="#booking">Tasting Reservations</a>
+        <li class="dropdown">
+      <a href="#">Event Gallery ▾</a>
+      <ul class="dropdown-content">
+        <li><a href="#event1">Savoring the Score</a></li>
+        <li><a href="#event2">Echoes at the Crossroads</a></li>
+        <li><a href="#event3">Night Market x Dining Table</a></li>
+        <li><a href="#event3">Contemplate</a></li>
+         <li><a href="#event3">Soil x Ocean (Taiwan)</a></li>
         <a href="#inquiries">Catering & Inquiries</a>
     </nav>
 
@@ -405,9 +468,11 @@ footer {
                 </div>
         </section>
 
-        <!-- Past Events Section -->
+        <!-- Event Gallery Section -->
         <section id="events">
-            <h2>Past Events</h2>
+            <section id="event1">
+
+            <h2>Event Gallery</h2>
             
              </div>
             <div class="menu-item">
@@ -444,10 +509,10 @@ footer {
 
            
             <embed src="Copy of Program Notes.pdf" width="100%" height="600px" type="application/pdf">
-
+</section>
 <!-- Provide a download link -->
 <a href="Copy of Program Notes.pdf" download>Download Zine as PDF</a>
-            
+          <section id="event2">  
             <div class="menu-item">
                 <h3>Menu: Echoes at the Crossroads </h3>
                 <p> This interactive menu was designed to take you on a reflective journey of personal emotions and memories regarding your college experience. You will get to think about, play with, and "choose" what you eat. From spaying different "essences of home" (mom's cooking, friend's laughter, home bed, etc.), to "cracking" and devouring your fears, this menu invites you to digest the bittersweet flavors of growth, identity, and belonging.
@@ -462,7 +527,8 @@ footer {
                      <img src="IMG_1439.jpeg"alt = "r">
                     <img src="IMG_1703.png"alt = "d"> </div>
                 <a href="Wedding (1).pdf" download>Download Menu as PDF</a>
-
+</section>
+            <section id="event3">
             </div>
             <div class="menu-item">
                 <h3>2024 Spring - Night Market x Dining Table </h3>
@@ -497,6 +563,8 @@ footer {
         });
     </script>
             </div>
+                </section>
+            <section id="event4">
             <div class="menu-item">
                 <h3>Menu: Winter 2023 - Contemplate</h3>
                 <p>"Contemplate" featured a gallery of winter Californian produce through a plant-forward approach. The menu was crafted in a way that encourages guests to engage in contemplation from the natural, material, then spiritual realm. The zine features food systems related artwork along with a perspective piece about the conundrum between individual, food ethics, cultural pillars, and normative definitions of sustainble food choices.</p>
@@ -505,6 +573,7 @@ footer {
                     <img src="contemp amuuuuse.png"  alt = "amuse">
                 </div>
             </div>
+                </section>
             
 <embed src="Contemplate.pdf" width="100%" height="600px" type="application/pdf">
 
@@ -513,6 +582,7 @@ footer {
                 
 
     </script>
+            <section id="event5">
             </div>
             <div class="menu-item">
                 <h3>Menu: Summer 2023 - Soil x Ocean </h3>
@@ -527,7 +597,7 @@ footer {
                     <img src="egg.png"alt = "hotspring egg">
                 </div>
             </div>
-            
+         </section>   
     
 
         <!-- Contact Section -->
