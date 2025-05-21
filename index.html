@@ -547,6 +547,35 @@ footer {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+        .featured-experience {
+  background-image: url('your-background.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.text-overlay {
+  background-color: rgba(255, 255, 255, 0.85); /* White box with slight transparency */
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.featured-experience h2 {
+  margin-top: 0;
+  color: #355c43;
+}
+
+.featured-experience p {
+  font-size: 16px;
+  color: #4e5345;
+}
 
 
 
@@ -583,10 +612,14 @@ footer {
                     <img src="smuse.png" alt="amuseee">
                     <img src="scallop.png"alt = "scallop">
                 </div>  
-            <section class="featured-experience">
-  <h2>🎵 Featured Experience: Savoring the Score</h2>
-  <p>What happens when flavor listens to melody? This event series pairs a live recital with a seasonal tasting menu, guiding you through rhythm, stories, memory, and taste.</p>
-<a href="#savoring" class="botanical-button">View Experience</a>
+           <section class="featured-experience">
+  <div class="text-overlay">
+    <h2>🎵 Featured Experience: Savoring the Score</h2>
+    <p>
+      What happens when flavor listens to melody? This event series pairs a live recital with a seasonal tasting menu, guiding you through rhythm, stories, memory, and taste.
+    </p>
+    <a href="#event1" class="botanical-button">View Experience</a>
+  </div>
 </section>
 
         </section>
