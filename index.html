@@ -514,6 +514,40 @@ footer {
   line-height: 1.6;
   margin-bottom: 20px;
 }
+        .reel-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.instagram-media {
+  flex: 1 1 48%;
+}
+
+.reel-caption {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reel-caption p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #355c43;
+}
+
+.reel-side-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
 
 
 
@@ -556,25 +590,24 @@ footer {
 </section>
 
         </section>
-<div class="reel-container">
+        <div class="reel-container">
   <!-- Instagram Reel Embed -->
-  <div class="reel-embed">
-    <blockquote 
-      class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DGO453dyY8c/" 
-      data-instgrm-version="14" 
-      style="max-width: 320px; min-width: 300px;">
-    </blockquote>
-  </div>
+  <blockquote 
+    class="instagram-media" 
+    data-instgrm-permalink="https://www.instagram.com/p/DGO453dyY8c/" 
+    data-instgrm-version="14" 
+    style="max-width: 100%; min-width: 300px;">
+  </blockquote>
 
-  <!-- Caption and Image -->
+  <!-- Caption + Image -->
   <div class="reel-caption">
     <p>
-      This reel offers a glimpse into the dishes and experiences I curated in 2024! Whether it was an interactive, memory-driven tasting experience built around themes of identity and transition, or a reimagination of traditional Taiwanese street food through a plant-based lens and intimate discussions about cultural resilience in the sustainable food space, we invite you to join us on the forever-evolving journey of sustainable, intentional, and sensory dining!
+      This reel offers a glimpse into the dishes and experiences I curated in 2024! Whether it was an interactive, memory-driven tasting experience built around themes of identity and transition, or a reimagination of traditional Taiwanese street food through a plant-based lens, we invite you join us on the journey of sustainable, sensory dining.
     </p>
-    <img src="scallooop crudo.png" alt="Complementary visual" class="small-reel-image">
+    <img src="scallooop crudo.png" alt="Experience Preview" class="reel-side-image">
   </div>
 </div>
+
 
 
 <!-- Instagram embed script -->
