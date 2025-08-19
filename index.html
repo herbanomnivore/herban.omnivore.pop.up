@@ -662,90 +662,74 @@ body {
   padding-top: 70px; /* Default for desktop navbar height */
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
-  .navbar ul {
-    flex-direction: row;
-    flex-wrap: wrap; /* allows items to go to second row if needed */
-    justify-content: center;
-    gap: 10px;
-    padding: 8px; /* smaller padding overall */
-  }
-
-  .navbar a {
-    font-size: 0.75rem; /* shrink font size */
-    padding: 4px 6px;   /* reduce click space */
-    text-align: center;
-    display: block;
-    white-space: nowrap; /* prevent weird wrapping inside buttons */
-  }
-
-  body {
-    padding-top: 50px; /* reduce space to match smaller navbar */
-  }
+/* Reset */
+* {
+  box-sizing: border-box;
 }
-        /* Base Styles */
+body {
+  margin: 0;
+  padding-top: 60px; /* Space for fixed navbar */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Base */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: white;
+  background-color: #76a76b;
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 10px 20px;
 }
+.logo {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Menu */
 .nav-menu {
-  display: flex;
-  gap: 20px;
   list-style: none;
+  display: flex;
+  gap: 15px;
 }
 .nav-menu a {
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
+  color: white;
+  padding: 8px 12px;
+  font-weight: 600;
 }
+
+/* Hamburger */
 .hamburger {
   display: none;
   font-size: 24px;
   background: none;
   border: none;
-  cursor: pointer;
+  color: white;
 }
 
-/* Mobile Styles */
+/* Mobile */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
   }
+
   .nav-menu {
     display: none;
-    flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 55px;
     left: 0;
     width: 100%;
-    background: white;
-    padding: 10px 0;
-  }
-  .nav-menu.show {
-    display: flex;
-  }
-}
-        @media (max-width: 768px) {
-  .nav-menu {
-    display: none;
     flex-direction: column;
     background-color: #76a76b;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
   }
 
   .nav-menu.show {
@@ -753,44 +737,15 @@ body {
   }
 
   .nav-menu li {
-    width: 100%;
     text-align: center;
     padding: 10px 0;
   }
 
   .nav-menu a {
+    padding: 10px;
     font-size: 1rem;
-    padding: 12px;
-    color: white;
-  }
-
-  .hamburger {
-    font-size: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-  }
-
-  .nav-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
   }
 }
-        html {
-  scroll-padding-top: 70px; /* same height as your nav bar */
-}
-html {
-  scroll-padding-top: 70px; /* same height as your nav bar */
-}
-
-.nav-menu {
-  background-color: rgba(118, 167, 107, 0.95);
-}
-
-
-</style>
 
     </style>
 
@@ -811,19 +766,16 @@ html {
 <nav class="navbar">
   <div class="nav-container">
     <a href="#" class="logo">Herban Omnivore</a>
-    <button class="hamburger" id="hamburger">
-      ☰
-    </button>
+    <button class="hamburger" id="hamburger">☰</button>
     <ul class="nav-menu" id="nav-menu">
       <li><a href="#about">About</a></li>
       <li><a href="#savoring">Savoring the Score</a></li>
       <li><a href="#events">Event Gallery</a></li>
-        <li><a href="#meet">Meet the Creator</a></li>
+      <li><a href="#meet">Meet the Creator</a></li>
       <li><a href="#inquiries">Private Events & Inquiry</a></li>
     </ul>
   </div>
 </nav>
-
     <main>
         <!-- About Section -->
         <section id="about" class="about">
