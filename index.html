@@ -631,19 +631,9 @@ img {
   height: auto;
   display: block;
 }
-        @media (max-width: 768px) {
-  nav ul.nav-simple {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .nav-simple a {
-    font-size: 1rem;
-    padding: 10px;
-  }
-} 
-        <style>
+       
+<style>
+/* Desktop styles */
 .navbar {
   position: fixed;
   top: 0;
@@ -652,6 +642,7 @@ img {
   z-index: 1000;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
 .navbar ul {
   display: flex;
   justify-content: center;
@@ -660,13 +651,35 @@ img {
   padding: 15px;
   margin: 0;
 }
+
 .navbar a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
 }
+
 body {
-  padding-top: 70px; /* Make room for sticky nav */
+  padding-top: 70px; /* Default for desktop navbar height */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: row;  /* Changed from column to row for horizontal layout */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px; /* Slimmer padding */
+  }
+
+  .navbar a {
+    font-size: 0.85rem;
+    padding: 5px 8px; /* Smaller tap targets */
+  }
+
+  body {
+    padding-top: 55px; /* Adjust for slightly shorter mobile navbar */
+  }
 }
 </style>
 
