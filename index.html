@@ -665,20 +665,23 @@ body {
 /* Mobile styles */
 @media (max-width: 768px) {
   .navbar ul {
-    flex-direction: row;  /* Changed from column to row for horizontal layout */
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap; /* allows items to go to second row if needed */
     justify-content: center;
-    gap: 15px;
-    padding: 10px; /* Slimmer padding */
+    gap: 10px;
+    padding: 8px; /* smaller padding overall */
   }
 
   .navbar a {
-    font-size: 0.85rem;
-    padding: 5px 8px; /* Smaller tap targets */
+    font-size: 0.75rem; /* shrink font size */
+    padding: 4px 6px;   /* reduce click space */
+    text-align: center;
+    display: block;
+    white-space: nowrap; /* prevent weird wrapping inside buttons */
   }
 
   body {
-    padding-top: 55px; /* Adjust for slightly shorter mobile navbar */
+    padding-top: 50px; /* reduce space to match smaller navbar */
   }
 }
 </style>
