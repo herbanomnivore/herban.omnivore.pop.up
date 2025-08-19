@@ -736,6 +736,59 @@ body {
     display: flex;
   }
 }
+        @media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #76a76b;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-menu a {
+    font-size: 1rem;
+    padding: 12px;
+    color: white;
+  }
+
+  .hamburger {
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+        html {
+  scroll-padding-top: 70px; /* same height as your nav bar */
+}
+html {
+  scroll-padding-top: 70px; /* same height as your nav bar */
+}
+
+.nav-menu {
+  background-color: rgba(118, 167, 107, 0.95);
+}
+
 
 </style>
 
@@ -1054,6 +1107,22 @@ body {
     document.getElementById("nav-menu").classList.toggle("show");
   });
 </script>
+            <!-- Your HTML content -->
+
+<script>
+  // Your JS goes here!
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  hamburger.addEventListener("click", function () {
+    navMenu.classList.toggle("show");
+    this.textContent = navMenu.classList.contains("show") ? "✖" : "☰";
+  });
+</script>
+
+</body>
+</html>
+
 
 
 </body>
