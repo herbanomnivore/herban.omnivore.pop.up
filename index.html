@@ -684,6 +684,59 @@ body {
     padding-top: 50px; /* reduce space to match smaller navbar */
   }
 }
+        /* Base Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+  }
+  .nav-menu.show {
+    display: flex;
+  }
+}
+
 </style>
 
     </style>
@@ -702,15 +755,21 @@ body {
         <p>Food, Music, Art: Mindful & Eco-Conscious Eating with Your Senses</p>
     </header>
 
-<nav>
-  <ul class="nav-simple">
-    <li><a href="#savoring" class="highlight-link">Savoring the Score</a></li>
-    <li><a href="#events">Event Gallery</a></li>
-    <li><a href="#meet">Meet the Creator</a></li>
-    <li><a href="#inquiries">Private Events & Inquiry</a></li>
-  </ul>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#" class="logo">Herban Omnivore</a>
+    <button class="hamburger" id="hamburger">
+      ☰
+    </button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#savoring">Savoring the Score</a></li>
+      <li><a href="#events">Event Gallery</a></li>
+        <li><a href="#meet">Meet the Creator</a></li>
+      <li><a href="#inquiries">Private Events & Inquiry</a></li>
+    </ul>
+  </div>
 </nav>
-
 
     <main>
         <!-- About Section -->
@@ -990,6 +1049,11 @@ body {
     <footer>
         <p>&copy; 2025 Phoebe Wu (Herban Omnivore). All rights reserved. | Berkeley, California</p>
     </footer>
+<script>
+  document.getElementById("hamburger").addEventListener("click", function () {
+    document.getElementById("nav-menu").classList.toggle("show");
+  });
+</script>
 
 
 </body>
