@@ -392,46 +392,7 @@ footer {
 .instagram-button:hover {
     background-color: #C13584; /* Darker shade on hover */
 }
-                .nav-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: #76a76b;
-}
-
-.nav-menu li {
-  position: relative;
-}
-
-.nav-menu > li {
-  margin: 0 10px;
-}
-        .nav-simple a, .nav-menu a {
-  word-break: break-word;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-
-.nav-menu a {
-  color: white;
-  text-decoration: none;
-  padding: 12px 16px;
-  display: inline-block;
-  font-weight: 600;
-} 
-        nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  background-color: #76a76b;
-  background-image: url('https://www.transparenttextures.com/patterns/diagmonds-light.png');
-}
+               
 
 
 /* Dropdown Content */
@@ -639,89 +600,109 @@ body {
 }
 
 /* Reset */
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  padding-top: 60px; /* Space for fixed navbar */
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Navbar Base */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #76a76b;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-.logo {
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-/* Menu */
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-.nav-menu a {
-  text-decoration: none;
-  color: white;
-  padding: 8px 12px;
-  font-weight: 600;
-}
-
-/* Hamburger */
-.hamburger {
-  display: none;
-  font-size: 24px;
-  background: none;
-  border: none;
-  color: white;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
+<style>
+  /* Base Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f5f1;
+    color: #4e5345;
+    overflow-x: hidden;
+    padding-top: 60px; /* height of navbar */
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
   }
 
-  .nav-menu {
-    display: none;
-    position: absolute;
-    top: 55px;
-    left: 0;
+  /* Navbar Styles */
+  .navbar {
+    position: fixed;
+    top: 0;
     width: 100%;
-    flex-direction: column;
     background-color: #76a76b;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
-
-  .nav-menu.show {
+  .nav-container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  .logo {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
   }
 
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Menu */
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
   .nav-menu li {
-    text-align: center;
-    padding: 10px 0;
+    position: relative;
+  }
+  .nav-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    font-weight: 600;
+    display: inline-block;
   }
 
-  .nav-menu a {
-    padding: 10px;
-    font-size: 1rem;
+  /* Mobile */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: 55px;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      background-color: #76a76b;
+    }
+    .nav-menu.show {
+      display: flex;
+    }
+    .nav-menu li {
+      text-align: center;
+      padding: 10px 0;
+    }
+    .nav-menu a {
+      padding: 10px;
+      font-size: 1rem;
+    }
   }
-}
+</style>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  hamburger.addEventListener("click", function () {
+    navMenu.classList.toggle("show");
+    this.textContent = navMenu.classList.contains("show") ? "✖" : "☰";
+  });
+</script>
+
 
     </style>
 
