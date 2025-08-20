@@ -1010,52 +1010,23 @@ body {
     <footer>
         <p>&copy; 2025 Phoebe Wu (Herban Omnivore). All rights reserved. | Berkeley, California</p>
     </footer>
-<script>
-  document.getElementById("hamburger").addEventListener("click", function () {
-    document.getElementById("nav-menu").classList.toggle("show");
-  });
-</script>
-            <!-- Your HTML content -->
+ 
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("nav-menu");
 
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("nav-menu");
+      hamburger.addEventListener("click", function () {
+        navMenu.classList.toggle("show");
+        this.textContent = navMenu.classList.contains("show") ? "✖" : "☰";
+      });
 
-  hamburger.addEventListener("click", function () {
-    navMenu.classList.toggle("show");
-    this.textContent = navMenu.classList.contains("show") ? "✖" : "☰";
-  });
-      const navLinks = document.querySelectorAll("#nav-menu a");
-
-  navLinks.forEach(link => {
-    link.addEventListener("click", function () {
-      navMenu.classList.remove("show");
-      hamburger.textContent = "☰";
-    });
-  });
-     document.querySelectorAll("#nav-menu a").forEach(link => {
-    link.addEventListener("click", () => {
-      navMenu.classList.remove("show");
-      hamburger.textContent = "☰";
-    });
-  });
-</script>
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
-
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-
-  // Optional: Auto-close menu after clicking a link
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('show');
-    });
-  });
-</script>
-
+      document.querySelectorAll("#nav-menu a").forEach(link => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("show");
+          hamburger.textContent = "☰";
+        });
+      });
+    </script>
 
 </body>
 </html>
