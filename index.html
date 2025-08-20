@@ -646,18 +646,19 @@ body {
       font-size: 1rem;
     }
   }
-</style>
+        .nav-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #76a76b;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  left: 0;
+}
 
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("nav-menu");
-
-  hamburger.addEventListener("click", function () {
-    navMenu.classList.toggle("show");
-    this.textContent = navMenu.classList.contains("show") ? "✖" : "☰";
-  });
-</script>
-
+.nav-menu.show {
+  display: flex;
+}
 
     </style>
 
@@ -995,8 +996,14 @@ body {
       hamburger.textContent = "☰";
     });
   });
+     document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("show");
+      hamburger.textContent = "☰";
+    });
+  });
 </script>
-</script>
+
 
 
 </body>
