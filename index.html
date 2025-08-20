@@ -590,111 +590,113 @@ body {
   padding-top: 70px; /* Default for desktop navbar height */
 }
 
-/* Reset */
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  /* Base Reset */
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f5f1;
-    color: #4e5345;
-    overflow-x: hidden;
-    padding-top: 60px; /* height of navbar */
-    background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f5f1;
+  color: #4e5345;
+  overflow-x: hidden;
+  padding-top: 60px; /* adjust based on actual navbar height */
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+}
+
+/* Navbar Container */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #76a76b;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Inner container to space content */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Logo */
+.logo {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Menu items */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  font-weight: 600;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #d9ead3;
+}
+
+/* Hamburger hidden by default */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
   }
 
-  /* Navbar Styles */
-  .navbar {
-    position: fixed;
-    top: 0;
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
     width: 100%;
     background-color: #76a76b;
-    z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  .logo {
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
   }
 
-  /* Hamburger */
-  .hamburger {
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
+  .nav-menu.show {
+    display: flex;
   }
 
-  /* Menu */
-  .nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-  }
   .nav-menu li {
-    position: relative;
+    text-align: center;
+    padding: 10px 0;
   }
+
   .nav-menu a {
-    text-decoration: none;
-    color: white;
-    padding: 8px 12px;
-    font-weight: 600;
-    display: inline-block;
+    font-size: 16px;
+    padding: 10px;
   }
-
-  /* Mobile */
-  @media (max-width: 768px) {
-    .hamburger {
-      display: block;
-    }
-    .nav-menu {
-      display: none;
-      position: absolute;
-      top: 55px;
-      left: 0;
-      width: 100%;
-      flex-direction: column;
-      background-color: #76a76b;
-    }
-    .nav-menu.show {
-      display: flex;
-    }
-    .nav-menu li {
-      text-align: center;
-      padding: 10px 0;
-    }
-    .nav-menu a {
-      padding: 10px;
-      font-size: 1rem;
-    }
-  }
-        .nav-menu {
-  display: none;
-  flex-direction: column;
-  background-color: #76a76b;
-  position: absolute;
-  top: 60px;
-  width: 100%;
-  left: 0;
 }
 
-.nav-menu.show {
-  display: flex;
-}
 
     </style>
 
@@ -719,11 +721,11 @@ body {
       <li><a href="#about">About</a></li>
       <li><a href="#savoring">Savoring the Score</a></li>
       <li><a href="#events">Event Gallery</a></li>
-      <li><a href="#meet">Meet the Creator</a></li>
-      <li><a href="#inquiries">Private Events & Inquiry</a></li>
+      <li><a href="#inquiries">Inquiries</a></li>
     </ul>
   </div>
 </nav>
+
     <main>
         <!-- About Section -->
         <section id="about" class="about">
