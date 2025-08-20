@@ -371,6 +371,42 @@ footer {
 .instagram-button:hover {
     background-color: #C13584; /* Darker shade on hover */
 }
+        /* HEADINGS */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* PARAGRAPHS */
+p {
+  margin-bottom: 24px;
+  line-height: 1.8;
+}
+
+/* IMAGES */
+img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* BUTTONS */
+button,
+.booking-link,
+.contact-link {
+  margin-top: 20px;
+}
+
+/* SECTION SPACING */
+section {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+/* FORM FIELDS */
+input, textarea, select {
+  margin-bottom: 20px;
+}
+
                
 
 
@@ -1003,7 +1039,21 @@ body {
     });
   });
 </script>
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
 
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  // Optional: Auto-close menu after clicking a link
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+    });
+  });
+</script>
 
 
 </body>
