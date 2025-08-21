@@ -726,9 +726,10 @@ main {
     font-size: 16px;
     width: 100%;
   }
-}
-        main section:first-of-type {
-  margin-top: 0;
+
+   main section:first-of-type {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 section {
@@ -741,7 +742,13 @@ body {
   background-repeat: repeat, no-repeat;
   background-size: auto, 100% 100%;
 }
-
+:target::before {
+  content: "";
+  display: block;
+  height: 80px; /* same or slightly larger than your navbar */
+  margin-top: -80px;
+  visibility: hidden;
+}
 
     </style>
 
