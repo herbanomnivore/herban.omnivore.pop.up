@@ -26,7 +26,8 @@
 </script>
 
     </head>
-    
+    <!-- Include in head -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Google Font: Poppins -->
     <style> 
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -406,6 +407,13 @@ section {
 input, textarea, select {
   margin-bottom: 20px;
 }
+h2 {
+  color: #355c43;
+  font-family: 'Playfair Display', serif;
+}
+section:nth-of-type(even) {
+  background: #f6faf3;
+}
 
                
 
@@ -582,6 +590,13 @@ img {
   height: auto;
   display: block;
 }
+        a, .button {
+  transition: transform 0.3s, color 0.3s;
+}
+a:hover, .button:hover {
+  transform: translateY(-3px);
+  color: #d9ead3;
+}
        
 
 body {
@@ -662,6 +677,11 @@ main {
 .nav-menu a:hover {
   color: #d9ead3;
 }
+        .navbar {
+  background-color: rgba(118, 167, 107, 0.9);
+  backdrop-filter: blur(4px);
+}
+
 
 /* HAMBURGER MENU */
 .hamburger {
@@ -738,7 +758,7 @@ main {
 <main>
 
         <!-- About Section -->
-        <section id="about" class="about">
+        <section id="about" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             <h2>About</h2>
             <p>Herban Omnivore is my love letter to all the senses—an intimate space shaped by food, music, writing, and storytelling. At its core, my work explores how fine dining and classical music—often viewed as exclusive—can be reimagined as approachable, multi-sensory experiences that foster cultural dialogue and community. As a classical musician, I am particularly inspired by a new generation that seeks meaning beyond performance and prestige, embracing creativity, curiosity, and connection.</p>
 
@@ -794,7 +814,7 @@ main {
 <script async src="//www.instagram.com/embed.js"></script>
 
        
-             <section id="savoring">
+             <section id="savoring" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
              </div>
             <div class="menu-item">
                 <h3>Savoring the Score: Recital Meets Tasting Menu</h3>
@@ -847,7 +867,7 @@ main {
 
 
          <!-- Event Gallery Section -->
-        <section id="events">
+        <section id="events" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
 <h2>Event Gallery</h2>
          <section id="event2">  
   <div class="menu-item">
@@ -940,7 +960,7 @@ main {
          </section>   
  
             <!-- Meet the Creator -->
-        <section id="meet">
+        <section id="meet" "fade-up">
             <h2>Meet the Creator</h2>
             <p>Phoebe Wu is a rising senior at UC Berkeley, double majoring in Economics and Music with a minor in Food Systems. A passionate performer, she served as concertmaster of the California Orchestra Institute in 2024, and is currently a first violinist in the UC Berkeley Symphony Orchestra . In February 2025, she performed the Butterfly Lovers Concerto with the orchestra upon winning the concerto competition. Her recent honors include the Roselyn Schneider Eisner Prize for artistic excellence and the Bernece Lyon Prize for creative innovation.</p>
 
@@ -963,7 +983,7 @@ main {
             
 
         <!-- Contact Section -->
-        <section id="inquiries">
+      <section id="inquiries" data-aos="zoom-in">
             <h2>Private Events & Catering Inquiry</h2>
 <p>Have any questions, want to collaborate, or inquire about private chef services and event ideas? Feel free to reach out through the form below! This is just a starting point—I'm always open to creative ideas and new formats :) </p>
 
@@ -1038,7 +1058,10 @@ main {
         });
       });
     </script>
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+</script>
 </body>
 </html>
 
