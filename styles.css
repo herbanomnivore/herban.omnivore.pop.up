@@ -1,0 +1,476 @@
+/* =========================
+   Base / Reset
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #4e5345;
+  background-color: #f0f5f1;
+
+  /* Your layered background idea, but clean */
+  background-image:
+    url('https://www.transparenttextures.com/patterns/skulls.png'),
+    linear-gradient(to right, #f0f5f1 0%, #f0f5f1 40%, #ffffff 60%, #f0f5f1 100%);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 100% 100%;
+
+  /* space for fixed navbar */
+  padding-top: 70px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
+}
+
+/* Headings / spacing */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+/* =========================
+   Header
+========================= */
+header {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #a3c497;
+  color: white;
+  border-bottom: 4px solid #a4c3a2;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background-image: url('https://www.transparenttextures.com/patterns/leaf.png');
+  margin-bottom: 0;
+}
+
+header h3 {
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+header p {
+  font-size: 18px;
+  margin-top: 10px;
+  font-style: italic;
+  padding: 0 10px;
+}
+
+/* =========================
+   Main container / Sections
+========================= */
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  background-color: rgba(255,255,255,0.9);
+}
+
+section {
+  margin: 60px 0;
+}
+
+section:nth-of-type(even) {
+  background: #f6faf3;
+}
+
+/* Nice anchor offset for fixed navbar */
+:target::before {
+  content: "";
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden;
+}
+
+/* Typography accent */
+h2 {
+  color: #355c43;
+  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* =========================
+   Navbar
+========================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(118, 167, 107, 0.9);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  font-weight: 600;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #d9ead3;
+  transform: translateY(-3px);
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #88b77b;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #6e9e60;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* =========================
+   Buttons / Links
+========================= */
+.booking-link, .contact-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #355c43;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+.booking-link:hover, .contact-link:hover {
+  background-color: #88b77b;
+  transform: translateY(-3px);
+}
+
+.eventbrite-button {
+  display: inline-block;
+  background: #f05537;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+.eventbrite-button:hover {
+  background: #c9472d;
+  transform: translateY(-3px);
+}
+
+.botanical-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #355c43;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+.botanical-button:hover {
+  background-color: #88b77b;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   Forms
+========================= */
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #355c43;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #f4f4f4;
+}
+
+button {
+  padding: 12px 25px;
+  background-color: #355c43;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #88b77b;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Layout helpers
+========================= */
+.photo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.photo-container img {
+  width: 48%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Featured Experience block */
+.featured-experience {
+  background-image: url('scoresss.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.text-overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.highlight-link {
+  color: #ffd700;
+  font-weight: 700;
+}
+
+.highlight-link:hover {
+  color: #d4af37;
+}
+
+/* Swiper sizing */
+.swiper-container {
+  width: 100%;
+  height: 1000px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #f9f9f9;
+}
+
+.swiper-slide img {
+  width: 70%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto 10px;
+}
+
+/* =========================
+   Instagram embed layout
+========================= */
+.reel-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+  margin: 40px 0;
+}
+
+.instagram-media {
+  flex: 1 1 48%;
+}
+
+.reel-caption {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reel-caption p {
+  color: #355c43;
+}
+
+.reel-side-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #355c43;
+  color: white;
+  background-image: url('https://www.transparenttextures.com/patterns/leaf.png');
+  border-top: 4px solid #88b77b;
+}
+
+/* =========================
+   Mobile
+========================= */
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px; /* keep space for fixed navbar */
+  }
+
+  main {
+    padding: 1.5rem 1rem;
+    margin: 20px 12px;
+  }
+
+  section {
+    margin: 40px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #76a76b;
+    margin-top: 10px;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-menu li {
+    text-align: center;
+    padding: 12px 0;
+    width: 100%;
+  }
+
+  .nav-menu a {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .photo-container img {
+    width: 100%;
+  }
+
+  /* Optional: make swiper less insane on mobile */
+  .swiper-container {
+    height: 520px;
+  }
+
+  /* Optional: Instagram embeds are heavy; at least constrain */
+  .reel-container blockquote.instagram-media {
+    height: 420px;
+    overflow: hidden;
+  }
+}
