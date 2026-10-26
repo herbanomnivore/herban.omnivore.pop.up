@@ -473,4 +473,44 @@ footer {
     height: 420px;
     overflow: hidden;
   }
+   /* Main body typography */
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+/* Elegant editorial headings */
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* Major section headings */
+h2 {
+  font-size: clamp(36px, 5vw, 58px);
+}
+
+/* Smaller headings */
+h3 {
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+/* Navigation */
+.navbar {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.10em;
+}
+
+/* Buttons */
+button, .botanical-button, .eventbrite-button {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
 }
